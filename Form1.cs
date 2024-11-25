@@ -1,4 +1,5 @@
 ﻿using DBProject.Attendee;
+using DBProject.Vendor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,15 +36,18 @@ namespace DBProject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
             //Registration registration = new Registration();
             //registration.Show();
 
             //EventSearchForm eventSearchForm = new EventSearchForm();
             //eventSearchForm.Show();
 
-            EventDashboardForm eventDashboardForm = new EventDashboardForm();
-            eventDashboardForm.Show();
+            //EventDashboardForm eventDashboardForm = new EventDashboardForm();
+            //eventDashboardForm.Show();
+
+            ContractAndPaymentTrackingForm f1 = new ContractAndPaymentTrackingForm();
+            f1.Show();
             this.Hide();
             
         }

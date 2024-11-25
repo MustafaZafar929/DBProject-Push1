@@ -26,5 +26,10 @@ namespace DBProject.Attendee
         {
 
         }
+
+        private void EventSearchForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

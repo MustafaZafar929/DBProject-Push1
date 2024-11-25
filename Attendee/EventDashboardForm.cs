@@ -34,5 +34,9 @@ namespace DBProject.Attendee
             listViewRegisteredEvents.Items.AddRange(items);
         }
 
+        private void listViewRegisteredEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

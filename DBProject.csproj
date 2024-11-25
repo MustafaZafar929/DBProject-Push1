@@ -96,11 +96,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendor\ContractAndPaymentTrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendor\ContractAndPaymentTrackingForm.Designer.cs">
+      <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vendor\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vendor\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ServiceBiddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendor\ServiceBiddingForm.Designer.cs">
+      <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Attendee\EventDashboardForm.resx">
       <DependentUpon>EventDashboardForm.cs</DependentUpon>
@@ -135,6 +147,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vendor\ContractAndPaymentTrackingForm.resx">
+      <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendor\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendor\ServiceBiddingForm.resx">
+      <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

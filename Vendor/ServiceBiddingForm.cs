@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace DBProject.Vendor
 {
-    public partial class Registration : Form
+    public partial class ServiceBiddingForm : Form
     {
-        public Registration()
+        public ServiceBiddingForm()
         {
             InitializeComponent();
         }
 
-        private void Registration_Load(object sender, EventArgs e)
+        private void ServiceBiddingForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstBidsForSelectedEvent_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

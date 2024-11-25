@@ -172,6 +172,7 @@
             this.Controls.Add(this.labelEventSearch);
             this.Name = "EventSearchForm";
             this.Text = "Event Search";
+            this.Load += new System.EventHandler(this.EventSearchForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DBProject.Vendor
 {
-    public partial class Registration : Form
+    public partial class ContractAndPaymentTrackingForm : Form
     {
-        public Registration()
+        public ContractAndPaymentTrackingForm()
         {
             InitializeComponent();
         }
 
-        private void Registration_Load(object sender, EventArgs e)
+        private void ContractAndPaymentTrackingForm_Load(object sender, EventArgs e)
         {
 
         }

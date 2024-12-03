@@ -1,6 +1,6 @@
 ﻿namespace DBProject.Vendor
 {
-    partial class Registration
+    partial class VendorRegistration
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.TextBox txtName;

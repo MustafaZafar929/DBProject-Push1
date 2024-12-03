@@ -94,6 +94,48 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Organiser\analytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\analytics.Designer.cs">
+      <DependentUpon>analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\attendees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\attendees.Designer.cs">
+      <DependentUpon>attendees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\create_event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\create_event.Designer.cs">
+      <DependentUpon>create_event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\ticket.Designer.cs">
+      <DependentUpon>ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organiser\vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organiser\vendors.Designer.cs">
+      <DependentUpon>vendors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vendor\ContractAndPaymentTrackingForm.cs">
@@ -102,17 +144,23 @@
     <Compile Include="Vendor\ContractAndPaymentTrackingForm.Designer.cs">
       <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vendor\Registration.cs">
+    <Compile Include="Vendor\VendorRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendor\Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <Compile Include="Vendor\VendorRegistration.Designer.cs">
+      <DependentUpon>VendorRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Vendor\ServiceBiddingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vendor\ServiceBiddingForm.Designer.cs">
       <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendor\vendors.Designer.cs">
+      <DependentUpon>vendors.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Attendee\EventDashboardForm.resx">
       <DependentUpon>EventDashboardForm.cs</DependentUpon>
@@ -138,6 +186,27 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\analytics.resx">
+      <DependentUpon>analytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\attendees.resx">
+      <DependentUpon>attendees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\create_event.resx">
+      <DependentUpon>create_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\ticket.resx">
+      <DependentUpon>ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organiser\vendors.resx">
+      <DependentUpon>vendors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -150,11 +219,14 @@
     <EmbeddedResource Include="Vendor\ContractAndPaymentTrackingForm.resx">
       <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendor\Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <EmbeddedResource Include="Vendor\VendorRegistration.resx">
+      <DependentUpon>VendorRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendor\ServiceBiddingForm.resx">
       <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendor\vendors.resx">
+      <DependentUpon>vendors.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

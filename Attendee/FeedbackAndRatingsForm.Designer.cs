@@ -88,7 +88,7 @@
             this.textBoxFeedback.Name = "textBoxFeedback";
             this.textBoxFeedback.Size = new System.Drawing.Size(628, 85);
             this.textBoxFeedback.TabIndex = 2;
-            this.textBoxFeedback.TextChanged += new System.EventHandler(this.textBoxFeedback_TextChanged);
+       //     this.textBoxFeedback.TextChanged += new System.EventHandler(this.textBoxFeedback_TextChanged);
             // 
             // labelFeedback
             // 
@@ -138,7 +138,7 @@
             this.Controls.Add(this.labelTitle);
             this.Name = "FeedbackAndRatingsForm";
             this.Text = "Feedback and Ratings";
-            this.Load += new System.EventHandler(this.FeedbackAndRatingsForm_Load);
+    //        this.Load += new System.EventHandler(this.FeedbackAndRatingsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

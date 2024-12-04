@@ -48,5 +48,10 @@ namespace DBProject.Attendee
                 MessageBox.Show("Please select a ticket to check-in.", "Error");
             }
         }
+
+        private void listViewTickets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

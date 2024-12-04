@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DBProject.Admin;
+using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace DBProject.Attendee
@@ -15,28 +10,62 @@ namespace DBProject.Attendee
         public EventDashboardForm()
         {
             InitializeComponent();
-            this.Load += EventDashboardForm_Load;
+            LoadRegisteredEvents(); // Load events when form is initialized
         }
 
-        
-
-
-        private void EventDashboardForm_Load(object sender, EventArgs e)
+        private void LoadRegisteredEvents()
         {
-            // Example data
-            var items = new ListViewItem[]
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EventManagement;Integrated Security=True";
+            int attendeeId = UserSession.UserId; // Assuming UserSession.UserId holds the logged-in user's ID
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                new ListViewItem(new[] { "Music Concert", "12/05/2024", "New York", "Upcoming" }),
-                new ListViewItem(new[] { "Tech Conference", "01/15/2025", "San Francisco", "Upcoming" }),
-                new ListViewItem(new[] { "Sports Event", "11/20/2024", "Chicago", "Completed" }),
-            };
+                string query = @"
+            SELECT E.Title, E.Date, E.Location, 'Booked' AS Status
+            FROM Event E
+            INNER JOIN EventRegistration ER ON E.EventID = ER.EventID
+            WHERE ER.AttendeeID = @AttendeeID";  // Filter by logged-in user
 
-            listViewRegisteredEvents.Items.AddRange(items);
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@AttendeeID", attendeeId);
+
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        listViewRegisteredEvents.Items.Clear();  // Clear existing items
+
+                        if (!reader.HasRows)
+                        {
+                            MessageBox.Show("You have not booked any events.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+
+                        while (reader.Read())
+                        {
+                            // Create new ListView item for each registered event
+                            ListViewItem item = new ListViewItem(reader["Title"].ToString());
+                            item.SubItems.Add(Convert.ToDateTime(reader["Date"]).ToString("yyyy-MM-dd HH:mm"));
+                            item.SubItems.Add(reader["Location"].ToString());
+                            item.SubItems.Add(reader["Status"].ToString());  
+
+                           
+                            listViewRegisteredEvents.Items.Add(item);
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading registered events: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
-        private void listViewRegisteredEvents_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBProject.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,56 +34,68 @@ namespace DBProject.Attendee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string email = textBox1.Text;
-            string password = textBox2.Text;
+            string email = textBox1.Text.Trim();
+            string password = textBox2.Text.Trim();
 
-           if(string.IsNullOrEmpty(email))
-           {
+            if (string.IsNullOrEmpty(email))
+            {
                 label4.Visible = true;
-           }
-
+                return;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
 
             if (string.IsNullOrEmpty(password))
             {
                 label5.Visible = true;
-                
+                return;
+            }
+            else
+            {
+                label5.Visible = false;
             }
 
-            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(*) FROM attendee where email = @email AND password = @password";
+                    string query = "SELECT AttendeeID FROM attendee WHERE email = @Email AND password = @Password";
 
-                    using (SqlCommand cmd = new SqlCommand(query , connection))
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Password", password);
 
-                        int result = (int)cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
-                        if(result > 0)
+                        if (result != null)
                         {
-                            MessageBox.Show("Login successful !");
-                            this.Close();
-                        }
+                           
+                            UserSession.Email = email;
+                            UserSession.UserId = Convert.ToInt32(result);
 
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            
+                            this.Close();
+                            FeedbackAndRatingsForm form = new FeedbackAndRatingsForm();
+                            form.Show();
+                        }
                         else
                         {
                             MessageBox.Show("Invalid email or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         }
                     }
                 }
-
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occured : {ex.Message}");
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
+
     }
 }

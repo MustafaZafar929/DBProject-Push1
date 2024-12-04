@@ -61,10 +61,11 @@
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "All Categories",
-            "Music",
-            "Sports",
-            "Conferences",
-            "Workshops"});
+    "Technology",
+    "Music",
+    "Art & Culture",
+    "Business",
+    "Health & Wellness"});
             this.comboBoxCategory.Location = new System.Drawing.Point(16, 100);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(121, 24);

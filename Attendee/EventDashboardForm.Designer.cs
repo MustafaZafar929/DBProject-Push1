@@ -15,7 +15,6 @@ namespace DBProject.Attendee
             this.columnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonViewDetails = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -38,13 +37,12 @@ namespace DBProject.Attendee
             this.columnStatus});
             this.listViewRegisteredEvents.FullRowSelect = true;
             this.listViewRegisteredEvents.HideSelection = false;
-            this.listViewRegisteredEvents.Location = new System.Drawing.Point(16, 60);
+            this.listViewRegisteredEvents.Location = new System.Drawing.Point(18, 74);
             this.listViewRegisteredEvents.Name = "listViewRegisteredEvents";
             this.listViewRegisteredEvents.Size = new System.Drawing.Size(550, 200);
             this.listViewRegisteredEvents.TabIndex = 1;
             this.listViewRegisteredEvents.UseCompatibleStateImageBehavior = false;
             this.listViewRegisteredEvents.View = System.Windows.Forms.View.Details;
-            this.listViewRegisteredEvents.SelectedIndexChanged += new System.EventHandler(this.listViewRegisteredEvents_SelectedIndexChanged);
             // 
             // columnEventName
             // 
@@ -66,13 +64,6 @@ namespace DBProject.Attendee
             this.columnStatus.Text = "Status";
             this.columnStatus.Width = 100;
             // 
-            // buttonViewDetails
-            // 
-            this.buttonViewDetails.Location = new System.Drawing.Point(0, 0);
-            this.buttonViewDetails.Name = "buttonViewDetails";
-            this.buttonViewDetails.Size = new System.Drawing.Size(75, 23);
-            this.buttonViewDetails.TabIndex = 4;
-            // 
             // buttonClose
             // 
             this.buttonClose.Location = new System.Drawing.Point(470, 280);
@@ -87,7 +78,6 @@ namespace DBProject.Attendee
             // 
             this.ClientSize = new System.Drawing.Size(600, 340);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonViewDetails);
             this.Controls.Add(this.listViewRegisteredEvents);
             this.Controls.Add(this.labelDashboardTitle);
             this.Name = "EventDashboardForm";
@@ -109,7 +99,6 @@ namespace DBProject.Attendee
         private System.Windows.Forms.ColumnHeader columnDate;
         private System.Windows.Forms.ColumnHeader columnLocation;
         private System.Windows.Forms.ColumnHeader columnStatus;
-        private System.Windows.Forms.Button buttonViewDetails;
         private System.Windows.Forms.Button buttonClose;
     }
 }

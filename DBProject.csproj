@@ -169,29 +169,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vendor\ContractAndPaymentTrackingForm.cs">
+    <Compile Include="Vendor\ContractPaymentTracking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendor\ContractAndPaymentTrackingForm.Designer.cs">
-      <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
+    <Compile Include="Vendor\ContractPaymentTracking.Designer.cs">
+      <DependentUpon>ContractPaymentTracking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vendor\VendorRegistration.cs">
+    <Compile Include="Vendor\ServiceSponsorshipBidding.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendor\VendorRegistration.Designer.cs">
-      <DependentUpon>VendorRegistration.cs</DependentUpon>
+    <Compile Include="Vendor\ServiceSponsorshipBidding.Designer.cs">
+      <DependentUpon>ServiceSponsorshipBidding.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vendor\ServiceBiddingForm.cs">
+    <Compile Include="Vendor\VendorLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendor\ServiceBiddingForm.Designer.cs">
-      <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
+    <Compile Include="Vendor\VendorLogin.Designer.cs">
+      <DependentUpon>VendorLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vendor\vendors.cs">
+    <Compile Include="Vendor\VendorSponsorRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendor\vendors.Designer.cs">
-      <DependentUpon>vendors.cs</DependentUpon>
+    <Compile Include="Vendor\VendorSponsorRegistration.Designer.cs">
+      <DependentUpon>VendorSponsorRegistration.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\EventManagementForm.resx">
       <DependentUpon>EventManagementForm.cs</DependentUpon>
@@ -256,17 +256,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vendor\ContractAndPaymentTrackingForm.resx">
-      <DependentUpon>ContractAndPaymentTrackingForm.cs</DependentUpon>
+    <EmbeddedResource Include="Vendor\ContractPaymentTracking.resx">
+      <DependentUpon>ContractPaymentTracking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendor\VendorRegistration.resx">
-      <DependentUpon>VendorRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vendor\ServiceBiddingForm.resx">
-      <DependentUpon>ServiceBiddingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vendor\vendors.resx">
-      <DependentUpon>vendors.cs</DependentUpon>
+    <EmbeddedResource Include="Vendor\VendorSponsorRegistration.resx">
+      <DependentUpon>VendorSponsorRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

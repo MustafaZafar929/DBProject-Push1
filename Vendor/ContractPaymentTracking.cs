@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace DBProject.Vendor
 {
-    public partial class ServiceBiddingForm : Form
+    public partial class ContractPaymentTracking : Form
     {
-        public ServiceBiddingForm()
+        public ContractPaymentTracking()
         {
             InitializeComponent();
-        }
-
-        private void ServiceBiddingForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstBidsForSelectedEvent_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

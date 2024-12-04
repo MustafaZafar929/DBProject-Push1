@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DBProject.Vendor
 {
-    public partial class vendors : Form
+    public partial class ServiceSponsorshipBidding : Form
     {
-        public vendors()
+        public ServiceSponsorshipBidding()
         {
             InitializeComponent();
-        }
-
-        private void vendors_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

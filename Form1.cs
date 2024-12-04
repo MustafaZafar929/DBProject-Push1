@@ -42,5 +42,11 @@ namespace DBProject
             this.Hide();
             
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VendorLogin login = new VendorLogin();
+            login.Show();
+        }
     }
 }
